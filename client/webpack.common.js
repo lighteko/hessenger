@@ -10,6 +10,18 @@ module.exports = {
     clean: true,
   },
   resolve: {
+    alias: {
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@components": path.resolve(__dirname, "src/components"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+      "@utils": path.resolve(__dirname, "src/utils"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@contexts": path.resolve(__dirname, "src/contexts"),
+      "@services": path.resolve(__dirname, "src/services"),
+      "@shared": path.resolve(__dirname, "src/shared"),
+      "@interfaces": path.resolve(__dirname, "src/interfaces"),
+    },
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   module: {
@@ -20,6 +32,21 @@ module.exports = {
         use: {
           loader: "ts-loader",
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "svg-url-loader",
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
