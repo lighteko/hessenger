@@ -4,7 +4,7 @@ export const ButtonLayout = styled.button`
   --x: 0px;
   --y: 0px;
   width: 100%;
-  margin: 2vh 0;
+  margin: 1vh 0 0 0;
   aspect-ratio: 7.2 / 1;
   border-radius: 15px;
   border: 0;

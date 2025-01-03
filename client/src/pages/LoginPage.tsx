@@ -1,6 +1,8 @@
 import hessenger from "@assets/hessenger.logo.svg";
-import { CenterLayout } from "@components/layouts/container.layouts";
+import { CenterLayout, RowLayout } from "@components/layouts/container.layouts";
+import { LinkLayout } from "@components/layouts/link.layouts";
 import LogInForm from "@components/ui/LogInForm";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -9,6 +11,11 @@ const LoginPage = () => {
         <img src={hessenger} alt="logo" />
       </CenterLayout>
       <LogInForm />
+      <RowLayout>
+        <LinkLayout to="/reset">Forgot password</LinkLayout>
+        ·
+        <LinkLayout to="/signup">Sign up</LinkLayout>
+      </RowLayout>
     </>
   );
 };

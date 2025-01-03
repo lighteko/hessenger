@@ -9,3 +9,12 @@ export const CenterLayout = styled.div<ICenterLayoutProps>`
   justify-content: center;
   align-items: center;
 `;
+
+export const RowLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.5vh 0;
+  font-size: 12px;
+`;
