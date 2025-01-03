@@ -1,12 +1,13 @@
 import hessenger from "@assets/hessenger.logo.svg";
+import { CenterLayout } from "@components/layouts/container.layouts";
 import LogInForm from "@components/ui/LogInForm";
 
 const LoginPage = () => {
   return (
     <>
-      <div>
+      <CenterLayout width="100%" height="80%">
         <img src={hessenger} alt="logo" />
-      </div>
+      </CenterLayout>
       <LogInForm />
     </>
   );

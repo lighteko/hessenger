@@ -1,11 +1,8 @@
 import { InputLayout } from "@components/layouts/input.layouts";
-import { ColorModeContext } from "@contexts/colormode.context";
-import useInput from "@hooks/useInput";
-import { InputHTMLAttributes, useContext } from "react";
+import { IBorderlessInputProps } from "@interfaces/input.element.interfaces";
 
-const BorderlessInput = (props: InputHTMLAttributes<HTMLInputElement>) => {
-  const [ref, value, handler] = useInput();
-  return <InputLayout ref={ref} value={value} onChange={handler} {...props} />
+const BorderlessInput = (props: IBorderlessInputProps) => {
+  return <InputLayout {...props} />;
 };
 
 export default BorderlessInput;
