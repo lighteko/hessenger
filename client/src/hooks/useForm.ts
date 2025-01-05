@@ -1,25 +1,22 @@
-import { IUseFormProps } from "@interfaces/hook.interfaces";
-import useInput from "./useInput";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 type UseFormReturnType = [
   (event: React.FormEvent<HTMLFormElement>) => void,
   boolean
 ];
 
-const useForm: (fields: string[]) => UseFormReturnType = (fields: string[]) => {
-  const [isValid, setIsValid] = useState(false);
+const useForm: (fields: string[]) => UseFormReturnType = (fields) => {
+  const [disabled, setDisabled] = useState(true);
+
   const onChange = (event: React.FormEvent<HTMLFormElement>) => {
-    let validity = isValid;
-    for (let inputType of fields) {
-      const inputObj = event.currentTarget.querySelector(
-        `[type='${inputType}']`
-      ) as HTMLInputElement;
-      validity = inputObj?.value !== "";
-    }
-    setIsValid(validity);
+    const inputs = Array.from(event.currentTarget.elements) as HTMLInputElement[];
+    const validity = fields.every((field) =>
+      inputs.some((input) => input.type === field && input.value.trim() === "")
+    );
+    setDisabled(validity);
   };
-  return [onChange, !isValid];
+
+  return [onChange, disabled];
 };
 
 export default useForm;

@@ -37,3 +37,7 @@ export const ButtonLayout = styled.button`
     background-color: #cdcdcd;
   }
 `;
+
+export const RoundedButtonLayout = styled(ButtonLayout)`
+  border-radius: 50%;
+`;

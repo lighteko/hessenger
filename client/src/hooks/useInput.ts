@@ -1,4 +1,4 @@
-import { ChangeEvent, RefObject, useRef, useState } from "react";
+import { RefObject, useRef, useState } from "react";
 
 type UseInputReturnType = [
   RefObject<HTMLInputElement | null>,

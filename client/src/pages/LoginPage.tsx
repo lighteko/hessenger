@@ -2,7 +2,6 @@ import hessenger from "@assets/hessenger.logo.svg";
 import { CenterLayout, RowLayout } from "@components/layouts/container.layouts";
 import { LinkLayout } from "@components/layouts/link.layouts";
 import LogInForm from "@components/ui/LogInForm";
-import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
