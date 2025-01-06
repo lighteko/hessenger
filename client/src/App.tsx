@@ -12,11 +12,12 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage.Layout />}>
+          <Route path="/signup" element={<SignupPage.Name />}>
             <Route path="name" element={<SignupPage.Name />} />
-            <Route path="email" element={<SignupPage.Email />} />
             <Route path="gender" element={<SignupPage.Gender />} />
             <Route path="birthday" element={<SignupPage.Birthday />} />
+            <Route path="email" element={<SignupPage.Email />} />
+            <Route path="verify" element={<SignupPage.Verify />} />
             <Route path="password" element={<SignupPage.Password />} />
           </Route>
         </Routes>
