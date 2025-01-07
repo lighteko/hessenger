@@ -13,6 +13,7 @@ export const ButtonLayout = styled.button`
   font-size: 14px;
   position: relative;
   overflow: hidden;
+  text-align: center;
   /* &:active:not(:disabled)::after {
     content: "";
     position: absolute;

@@ -1,5 +1,6 @@
 import SemiRoundedButton from "@components/elements/SemiRoundedButton";
-import { CenteredRowPageLayout } from "@components/layouts/page.layouts";
+import { ButtonLayout } from "@components/layouts/button.layouts";
+import { ColumnLayout } from "@components/layouts/container.layouts";
 
 const Layout = ({
   header,
@@ -11,13 +12,13 @@ const Layout = ({
   validation: () => boolean;
 }) => {
   return (
-    <CenteredRowPageLayout>
+    <ColumnLayout>
       <h1>{header.title}</h1>
       <p>{header.content}</p>
       {form}
-      <SemiRoundedButton>Next</SemiRoundedButton>
-      <SemiRoundedButton>Back</SemiRoundedButton>
-    </CenteredRowPageLayout>
+      <ButtonLayout>Next</ButtonLayout>
+      <ButtonLayout>Back</ButtonLayout>
+    </ColumnLayout>
   );
 };
 

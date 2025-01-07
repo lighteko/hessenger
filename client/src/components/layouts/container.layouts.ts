@@ -18,3 +18,11 @@ export const RowLayout = styled.div`
   margin: 1.5vh 0;
   font-size: 12px;
 `;
+
+export const ColumnLayout = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
