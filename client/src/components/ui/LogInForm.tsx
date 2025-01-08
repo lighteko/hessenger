@@ -9,7 +9,7 @@ import { useRef } from "react";
 const LogInForm = () => {
   const [onChange, disabled] = useForm(["email", "password"]);
   return (
-    <FormLayout onChange={onChange} noValidate>
+    <FormLayout onChange={onChange} method="POST" noValidate>
       <BorderlessInput type="email" placeholder="Email" />
       <HorizontalLine />
       <PasswordInput />

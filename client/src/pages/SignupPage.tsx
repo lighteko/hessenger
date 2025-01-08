@@ -1,5 +1,5 @@
 import SemiRoundedButton from "@components/elements/SemiRoundedButton";
-import { ButtonLayout } from "@components/layouts/button.layouts";
+import { RoundedButtonLayout } from "@components/layouts/button.layouts";
 import { ColumnLayout } from "@components/layouts/container.layouts";
 
 const Layout = ({
@@ -16,8 +16,8 @@ const Layout = ({
       <h1>{header.title}</h1>
       <p>{header.content}</p>
       {form}
-      <ButtonLayout>Next</ButtonLayout>
-      <ButtonLayout>Back</ButtonLayout>
+      <RoundedButtonLayout>Next</RoundedButtonLayout>
+      <RoundedButtonLayout>Back</RoundedButtonLayout>
     </ColumnLayout>
   );
 };
