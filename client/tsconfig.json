@@ -17,6 +17,7 @@
     "noEmit": false,
     "baseUrl": "./src",
     "paths": {
+      "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
@@ -24,10 +25,11 @@
       "@hooks/*": ["hooks/*"],
       "@contexts/*": ["contexts/*"],
       "@services/*": ["services/*"],
-      "@types/*": ["types/*"]
+      "@shared/*": ["shared/*"],
+      "@interfaces/*": ["interfaces/*"]
     },
     "outDir": "./dist"
   },
-  "include": ["src"],
+  "include": ["src", "declarations.d.ts"],
   "exclude": ["node_modules"]
 }
