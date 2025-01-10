@@ -26,8 +26,8 @@ const Name = () => (
   <>
     <Layout
       header={{
-        title: "",
-        content: "",
+        title: "Name",
+        content: "Enter your full name",
       }}
       form={undefined}
       validation={function (): boolean {
