@@ -1,6 +1,7 @@
 import SemiRoundedButton from "@components/elements/SemiRoundedButton";
 import { RoundedButtonLayout } from "@components/layouts/button.layouts";
 import { ColumnLayout } from "@components/layouts/container.layouts";
+import { TextLayout } from "@components/layouts/text.layouts";
 
 const Layout = ({
   header,
@@ -13,8 +14,10 @@ const Layout = ({
 }) => {
   return (
     <ColumnLayout>
-      <h1>{header.title}</h1>
-      <p>{header.content}</p>
+      <TextLayout margin={0.5} size={2} weight="bold">
+        Name
+      </TextLayout>
+      <TextLayout margin={0} size={1} weight="400">{header.content}</TextLayout>
       {form}
       <RoundedButtonLayout>Next</RoundedButtonLayout>
       <RoundedButtonLayout>Back</RoundedButtonLayout>
